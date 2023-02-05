@@ -1,0 +1,239 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(to right, #9a1d86, #1595be);
+  font-weight: bold;
+}
+
+.player {
+  height: 95vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.wrapper {
+  border: 3px solid rgba(255, 230, 0, 0.505);
+  padding: 30px;
+  border-radius: 50px;
+  /* background-color: #709f00; */
+  background: rgb(0, 36, 19);
+  background: linear-gradient(
+    225deg,
+    rgba(0, 36, 19, 1) 8%,
+    rgba(9, 121, 56, 1) 41%,
+    rgba(4, 70, 172, 1) 74%,
+    rgba(0, 212, 255, 1) 99%
+  );
+  box-shadow: rgba(88, 84, 84, 0.54) 20px 19px 38px,
+    rgba(112, 102, 102, 0.623) 20px 15px 32px;
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.track-art {
+  margin: 25px;
+  height: 250px;
+  width: 250px;
+  border: 5px solid #1ea319;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  -moz-box-shadow: 0px 6px 5px rgb(230, 230, 230);
+  -webkit-box-shadow: 0px 6px 50px rgb(166, 129, 129);
+  box-shadow: 10px 5px 15px rgb(11, 197, 29);
+  -moz-border-radius: 190px;
+  -webkit-border-radius: 190px;
+  border-radius: 190px;
+}
+
+.now-playing {
+  font-size: 1.5rem;
+  color: rgb(49, 195, 161);
+}
+
+.track-name {
+  font-size: 2.5rem;
+}
+
+.track-artist {
+  margin-top: 5px;
+  font-size: 1.5rem;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.active {
+  color: rgb(157, 27, 1);
+}
+
+.repeat-track,
+.random-track,
+.playpause-track,
+.prev-track,
+.next-track {
+  padding: 25px;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.repeat-track:hover,
+.random-track:hover,
+.playpause-track:hover,
+.prev-track:hover,
+.next-track:hover {
+  opacity: 1;
+}
+
+.slider_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.seek_slider,
+.volume_slider {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 5px;
+  background: #880083a1;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.seek_slider::-webkit-slider-thumb,
+.volume_slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: rgb(13, 255, 0);
+  border: 3px solid #6237ff;
+  cursor: grab;
+  border-radius: 100%;
+}
+
+.seek_slider:hover,
+.volume_slider:hover {
+  opacity: 1;
+  color: ;
+}
+
+.seek_slider {
+  width: 60%;
+}
+
+.volume_slider {
+  width: 30%;
+}
+
+.current-time,
+.total-duration {
+  padding: 10px;
+}
+
+i.fa-volume-down,
+i.fa-volume-up {
+  padding: 10px;
+  color: #e23939;
+}
+
+i,
+i.fa-play-circle,
+i.fa-pause-circle,
+i.fa-step-forward,
+i.fa-step-backward,
+p {
+  cursor: pointer;
+  color: #97c404;
+}
+
+i:hover,
+i.fa-play-circle:hover,
+i.fa-pause-circle:hover,
+i.fa-step-forward:hover,
+i.fa-step-backward:hover,
+p:hover {
+  cursor: pointer;
+  color: #f71000;
+}
+
+.randomActive {
+  color: rgb(13, 255, 0);
+}
+.rotate {
+  animation: rotation 30s infinite linear;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.track-name {
+  color: rgba(171, 237, 78, 0.89);
+}
+
+.track-artist {
+  color: rgba(0, 255, 255, 0.417);
+}
+
+.loader {
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader .stroke {
+  background: #e23939;
+  height: 150%;
+  width: 10px;
+  border-radius: 50px;
+  margin: 0 5px;
+  animation: animate 1.4s linear infinite;
+}
+@keyframes animate {
+  50% {
+    height: 20%;
+    background: #51c257;
+  }
+
+  100% {
+    background: #42f463;
+    height: 100%;
+  }
+}
+.stroke:nth-child(1) {
+  animation-delay: 2s;
+}
+.stroke:nth-child(2) {
+  animation-delay: 5s;
+}
+.stroke:nth-child(3) {
+  animation-delay: 7s;
+}
+.stroke:nth-child(4) {
+  animation-delay: 9s;
+}
+.stroke:nth-child(5) {
+  animation-delay: 7s;
+}
+.stroke:nth-child(6) {
+  animation-delay: 5s;
+}
+.stroke:nth-child(7) {
+  animation-delay: 2s;
+}
